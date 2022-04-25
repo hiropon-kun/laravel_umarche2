@@ -8357,24 +8357,33 @@ var __webpack_exports__ = {};
   !*** ./resources/js/swiper.js ***!
   \********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/ */ "./node_modules/swiper/esm/components/core/core-class.js");
+/* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/core */ "./node_modules/swiper/esm/components/core/core-class.js");
 /* harmony import */ var swiper_swiper_bundle_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/swiper-bundle.css */ "./node_modules/swiper/swiper-bundle.css");
-/* harmony import */ var swiper___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/ */ "./node_modules/swiper/esm/components/navigation/navigation.js");
-/* harmony import */ var swiper___WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/ */ "./node_modules/swiper/esm/components/pagination/pagination.js");
+/* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/core */ "./node_modules/swiper/esm/components/navigation/navigation.js");
+/* harmony import */ var swiper_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/core */ "./node_modules/swiper/esm/components/pagination/pagination.js");
+// import Swiper JS
+ // import Swiper styles
 
+ // core version + navigation, pagination modules:
 
+ // configure Swiper to use modules
 
-swiper___WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper___WEBPACK_IMPORTED_MODULE_2__["default"], swiper___WEBPACK_IMPORTED_MODULE_3__["default"]]);
-var swiper = new swiper___WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-container', {
-  // direction:'vertical',
+swiper_core__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper_core__WEBPACK_IMPORTED_MODULE_2__["default"], swiper_core__WEBPACK_IMPORTED_MODULE_3__["default"]]); // init Swiper:
+
+var swiper = new swiper_core__WEBPACK_IMPORTED_MODULE_1__["default"]('.swiper-container', {
+  // Optional parameters
+  // direction: 'vertical',
   loop: true,
+  // If we need pagination
   pagination: {
     el: '.swiper-pagination'
   },
+  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev'
   },
+  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar'
   }
