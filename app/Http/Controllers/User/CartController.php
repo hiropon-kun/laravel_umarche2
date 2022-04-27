@@ -65,7 +65,7 @@ class CartController extends Controller
             $quantity = Stock::where('product_id',$product->id)->sum('quantity');
 
             if ($product->pivot->quantity > $quantity) {
-                return view('user.cart.index');
+                return redirect()->route('user.cart.index');
             } else {
                 $lineItem = [
                     'name' => $product->name,
@@ -86,8 +86,6 @@ class CartController extends Controller
                 'quantity' => $product->pivot->quantity * -1,
             ]);
         }
-
-        dd('test');
 
         \Stripe\Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
 
